@@ -37,7 +37,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-app.set('port', process.env.PORT || 80);
+app.set('port', process.env.PORT || 4000);
 
 app.get('/', (req, res) => {
     res.status(418).send("4th Project");
