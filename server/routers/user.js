@@ -20,7 +20,7 @@ router.post('/loginapp' , (req,res)=>{
             res.status(404).send();
         }
     })
-});
+}); 
 
 router.post('/signupapp' , (req,res)=>{
     console.log('user app sign up');

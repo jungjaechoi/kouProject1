@@ -1,5 +1,4 @@
 const UserModel = require('../models/registermodel');
-const ResModel = require('../models/resmodel');
 
 
 function loginapp(pemail ,ppassword, callback){
@@ -17,7 +16,7 @@ function signupapp(pemail ,callback){
         email : pemail
     }
     UserModel.findOne(query,(err,result)=>{
-        callback(result);
+        callback(result); 
     })
 }
 
@@ -33,14 +32,6 @@ function addOneapp(pname, pemail ,ppassword , callback){
 }
 
 
-function checkoutEmail(pemail, callback){
-    const query ={
-        email : pemail
-    }
-    ResModel.findOne(query, (err,result)=>{
-        callback(result);
-    })
-}
 
 
 
@@ -50,6 +41,5 @@ function checkoutEmail(pemail, callback){
 module.exports = {
     loginapp,
     signupapp,
-    addOneapp,
-    checkoutEmail,
+    addOneapp
 }
